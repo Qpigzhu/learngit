@@ -8,6 +8,9 @@ import json
 
 
 def c_group(bot):
+    """
+    创建一个群
+    """
     friends = bot.friends()
     creates = bot.create_group(friends[:3],topic='检测agg')
     print(creates)
@@ -21,11 +24,6 @@ def main():
     bot = Bot(cache_path =True)
     c_group(bot)
     friends = bot.friends(update=True)
-
-
-
-
-
 
 
     groups = bot.groups().search('检测agg')
